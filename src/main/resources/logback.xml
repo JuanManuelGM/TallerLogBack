@@ -1,0 +1,41 @@
+<configuration debug="true">
+
+	<!-- VARIABLE FECHA -->
+	<timestamp key="fecha" datePattern="dd-MM-yyyy" />
+	
+	<!-- APPENDER -->
+	<appender name="Log1"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		
+		<!-- NOMBRE DEL FICHERO-->
+		<file>C:/dev/Eclipse WorkSpace/BACKEND/nttdatacenters-logback-t1-JMGM/src/main/resources/MainLog-${fecha}.log.zip</file>
+		<append>false</append>
+		
+		<!-- POLÍTICA GESTION FICHERO -->
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>C:/dev/Eclipse WorkSpace/BACKEND/nttdatacenters-logback-t1-JMGM/src/main/resources/MainLog-${fecha}.%i.log.zip</fileNamePattern>
+			
+			<!-- DIVISIONES DEL FICHERO MIN 1 MAX 3 -->
+			<minIndex>1</minIndex>
+			<maxIndex>3</maxIndex>
+		</rollingPolicy>
+
+		<!-- LIMITE TAMAÑO FICHERO -->
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>50KB</maxFileSize>
+		</triggeringPolicy>
+		
+		<!-- FORMATO PRESENTACIÓN DEL FICHERO -->
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - [%method] - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- CONFIGURACION LOGGER ROOT -->
+	<root level="Trace">
+		<appender-ref ref="Log1" />
+	</root>
+
+</configuration>

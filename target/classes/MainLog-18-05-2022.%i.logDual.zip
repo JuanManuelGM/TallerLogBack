@@ -1,0 +1,10 @@
+15:06:02.792 [main] INFO  c.n.n.Main - [main] - INICIO del método main()
+15:06:02.794 [main] INFO  c.n.n.Main - [maximo] - INICIO del método maximo() v3
+15:06:02.794 [main] INFO  c.n.n.Main - [maximo] - INICIO del método maximo() v2
+15:06:02.794 [main] INFO  c.n.n.Main - [maximo] - FIN del método maximo() v2
+15:06:02.794 [main] INFO  c.n.n.Main - [maximo] - FIN del método maximo()
+15:06:02.795 [main] INFO  c.n.n.Main - [maximo] - INICIO del método maximo() v2
+15:06:02.795 [main] INFO  c.n.n.Main - [maximo] - FIN del método maximo() v2
+15:06:02.795 [main] INFO  c.n.n.Main - [main] - FIN del método main()
+18:56:23.150 [main] INFO  c.n.n.Main - [main] - INICIO del método main()
+18:56:23.152 [main] INFO  c.n.n.Main - [main] - FIN del método main()
